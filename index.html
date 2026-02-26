@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pind & Pipali — The Heritage of Ludhiana, Bottled.</title>
+    <meta name="description"
+        content="Authentic Punjabi artisanal pickles crafted in traditional ceramic barnis under the Ludhiana sun. Maa de Hath da Swad — the taste of mother's hand, in every jar." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Inter:wght@300;400;500;600&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: '#E8750A',
+                        terra: '#A0522D',
+                        cream: '#FAF6EF',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream dark:bg-gray-950 text-brown-text dark:text-gray-100 transition-colors duration-300">
+
+    <!-- ===================== NAV ===================== -->
+    <nav class="nav dark:bg-gray-900/80 dark:border-b dark:border-gray-800" id="main-nav">
+        <div class="nav-inner">
+            <div class="nav-logo">
+                <span class="logo-hindi">ਪਿੰਡ</span>
+                <span class="logo-ampersand">&amp;</span>
+                <span class="logo-english">Pipali</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#collection" class="nav-link" data-t="collection">Collection</a></li>
+                <li><a href="#story" class="nav-link" data-t="story">Our Story</a></li>
+                <li><a href="#process" class="nav-link" data-t="process">The Process</a></li>
+                <li><a href="#pillars" class="nav-link" data-t="whyUs">Why Us</a></li>
+            </ul>
+            <div class="nav-actions flex items-center gap-4">
+                <button id="lang-toggle"
+                    class="nav-toggle-btn text-sm font-bold px-2 py-1 bg-saffron text-white rounded hover:bg-saffron-dk transition-colors">ਪੰ</button>
+                <button id="theme-toggle"
+                    class="nav-toggle-btn p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <svg class="w-5 h-5 dark:hidden" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" />
+                    </svg>
+                    <svg class="w-5 h-5 hidden dark:block text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path
+                            d="M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1a1 1 0 112 0v1a1 1 0 11-2 0zM13 16v-1a1 1 0 112 0v1a1 1 0 11-2 0zM14.95 15.05a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0z" />
+                    </svg>
+                </button>
+                <button class="btn-cart" id="cart-btn" aria-label="Open cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <path d="M16 10a4 4 0 01-8 0" />
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+                <button class="btn-primary nav-cta" data-t="shopNow"
+                    onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Shop
+                    Now</button>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="nav-mobile" id="nav-mobile">
+            <a href="#collection" class="mobile-link">Collection</a>
+            <a href="#story" class="mobile-link">Our Story</a>
+            <a href="#process" class="mobile-link">The Process</a>
+            <a href="#pillars" class="mobile-link">Why Us</a>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero dark:after:bg-black/60" id="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-art">
+                <!-- Decorative pickle jar illustration using CSS/SVG -->
+                <div class="jar-hero">
+                    <div class="jar-body">
+                        <div class="jar-content">
+                            <div class="pickle-layer l1"></div>
+                            <div class="pickle-layer l2"></div>
+                            <div class="pickle-layer l3"></div>
+                            <div class="spice-float s1">🌶</div>
+                            <div class="spice-float s2">✦</div>
+                            <div class="spice-float s3">🌿</div>
+                        </div>
+                        <div class="jar-shine"></div>
+                    </div>
+                    <div class="jar-lid"></div>
+                    <div class="jar-label">Grandmother's Special<br><em>Mango Pickle</em></div>
+                </div>
+                <div class="hero-spice-scatter">
+                    <div class="spice-dot"
+                        style="top:20%;left:10%;width:12px;height:12px;background:#c0392b;border-radius:50%;animation-delay:0s">
+                    </div>
+                    <div class="spice-dot"
+                        style="top:70%;left:15%;width:8px;height:8px;background:#e67e22;border-radius:50%;animation-delay:0.3s">
+                    </div>
+                    <div class="spice-dot"
+                        style="top:30%;right:12%;width:10px;height:10px;background:#27ae60;border-radius:50%;animation-delay:0.6s">
+                    </div>
+                    <div class="spice-dot"
+                        style="top:80%;right:18%;width:6px;height:6px;background:#e67e22;border-radius:50%;animation-delay:1s">
+                    </div>
+                    <div class="spice-dot"
+                        style="top:55%;left:8%;width:14px;height:14px;background:#c0392b;border-radius:2px;transform:rotate(15deg);animation-delay:0.2s">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container" style="position:relative;z-index:2;">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Ludhiana, Punjab · Since 1962</span>
+                </div>
+                <h1 class="hero-title">
+                    Authentic Punjabi<br>
+                    <em>Heritage</em> in<br>
+                    Every Bite.
+                </h1>
+                <p class="hero-tagline">The Heritage of Ludhiana, Bottled.</p>
+                <p class="hero-sub">Maa de Hath da Swad — The taste of a mother's hand,<br>slow-cured under the Punjabi
+                    sun, jar by jar.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary btn-large" data-t="explore"
+                        onclick="document.getElementById('collection').scrollIntoView({behavior:'smooth'})">
+                        Explore the Collection
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <button class="btn-ghost btn-large" data-t="story"
+                        onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">
+                        Our Story
+                    </button>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <span class="trust-num">62+</span>
+                        <span class="trust-label">Years of Craft</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-num">100%</span>
+                        <span class="trust-label">Natural Ingredients</span>
+                    </div>
+                    <div class="trust-divider"></div>
+                    <div class="trust-item">
+                        <span class="trust-num">12</span>
+                        <span class="trust-label">Signature Varieties</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll to discover</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee-bar">
+        <div class="marquee-track">
+            <span>No Artificial Preservatives</span>
+            <span class="sep">✦</span>
+            <span>Sun-Cured in Ceramic Barnis</span>
+            <span class="sep">✦</span>
+            <span>Farm-Sourced Spices</span>
+            <span class="sep">✦</span>
+            <span>Maa de Hath da Swad</span>
+            <span class="sep">✦</span>
+            <span>Ludhiana's Finest</span>
+            <span class="sep">✦</span>
+            <span>No Artificial Preservatives</span>
+            <span class="sep">✦</span>
+            <span>Sun-Cured in Ceramic Barnis</span>
+            <span class="sep">✦</span>
+            <span>Farm-Sourced Spices</span>
+            <span class="sep">✦</span>
+            <span>Maa de Hath da Swad</span>
+            <span class="sep">✦</span>
+            <span>Ludhiana's Finest</span>
+            <span class="sep">✦</span>
+        </div>
+    </div>
+
+    <!-- ===================== COLLECTION ===================== -->
+    <section id="collection" class="collection py-20 dark:bg-gray-900">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">The Flavor Grid</span>
+                <h2 class="section-title">Our Collection</h2>
+                <p class="section-sub">Each jar is a labour of love — hand-selected produce, stone-ground spices, and
+                    weeks of patient sun-curing.</p>
+            </div>
+            <div class="product-grid">
+
+                <!-- Product 1: Mango -->
+                <div class="product-card" id="prod-mango" data-product="mango">
+                    <div class="card-image bg-orange-50 dark:bg-orange-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/mango_pickle_8k_v2_1772097969085.png"
+                            alt="Grandmother's Special Mango Pickle" class="w-full h-full object-cover">
+                        <div class="card-badge">BESTSELLER</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Ramkela, Ludhiana</div>
+                        <h3 class="card-name">Grandmother's Mango Pickle</h3>
+                        <p class="card-desc">The original. Ramkela mangoes hand-pounded with 11 sun-roasted spices in
+                            cold-pressed mustard oil. 21 days of Ludhiana sun.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Medium</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 349 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('mango')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Grandmother\'s Mango Pickle', 349)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Lime -->
+                <div class="product-card" id="prod-lime" data-product="lime">
+                    <div class="card-image bg-yellow-50 dark:bg-yellow-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/lime_pickle_8k_vfinal_1772098013542.png"
+                            alt="Sun-Kissed Lime Pickle" class="w-full h-full object-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Sweet Lime Farms, Ludhiana</div>
+                        <h3 class="card-name">Sun-Kissed Lime Pickle</h3>
+                        <p class="card-desc">Kalinji-scented lime wedges matured for 30 days in terracotta barnis.
+                            Bright, tangy, deeply aromatic. A breakfast essential.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Mild</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 299 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('lime')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Sun-Kissed Lime Pickle', 299)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Chili -->
+                <div class="product-card" id="prod-chili" data-product="chili">
+                    <div class="card-image bg-green-50 dark:bg-green-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/green_chili_pickle_8k_v3_new_1772098103115.png"
+                            alt="Fiery Green Chili Pickle" class="w-full h-full object-cover">
+                        <div class="card-badge new-badge">NEW</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Chili Orchards, Punjab</div>
+                        <h3 class="card-name">Fiery Green Chili Pickle</h3>
+                        <p class="card-desc">Thick-cut Punjabi hari mirch stuffed with fennel, fenugreek, and dry mango
+                            powder. A bold, fire-breathing tradition on every plate.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                            </div>
+                            <span class="heat-text">Extra Hot</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 329 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('chili')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Fiery Green Chili Pickle', 329)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4: Garlic -->
+                <div class="product-card" id="prod-garlic" data-product="garlic">
+                    <div class="card-image bg-amber-50 dark:bg-amber-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/garlic_pickle_8k_v2_1772098054364.png"
+                            alt="Lahsun Mirch Pickle" class="w-full h-full object-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Ropar Garlic Farms, Punjab</div>
+                        <h3 class="card-name">Lahsun Mirch Pickle</h3>
+                        <p class="card-desc">Whole garlic cloves slow-infused in black pepper, red chili, and rock salt.
+                            The one that turns any meal into a Punjabi feast.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Hot</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 319 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('garlic')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Lahsun Mirch Pickle', 319)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5: Mixed Veg -->
+                <div class="product-card" id="prod-mixed" data-product="mixed">
+                    <div class="card-image bg-orange-50 dark:bg-orange-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/gobhi_shalgam_pickle_8k_v2_new_1772098159928.png"
+                            alt="Punjab Mixed Achar" class="w-full h-full object-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Local Punjab Farms</div>
+                        <h3 class="card-name">Punjab Mixed Achar</h3>
+                        <p class="card-desc">Cauliflower, carrot, turnip, and raw mango — unified in a deep mustard oil
+                            masala. The taste of winter mornings in Ludhiana.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Mild</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 379 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('mixed')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Punjab Mixed Achar', 379)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6: Ginger -->
+                <div class="product-card" id="prod-ginger" data-product="ginger">
+                    <div class="card-image bg-yellow-50 dark:bg-yellow-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/ginger_pickle_8k_vfinal_new_1772098226101.png"
+                            alt="Adrak Rai Pickle" class="w-full h-full object-cover">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Himachal Foothills, Punjab</div>
+                        <h3 class="card-name">Adrak Rai Pickle</h3>
+                        <p class="card-desc">Young ginger, cut julienne and preserved in mustard seeds, turmeric, and
+                            raw cane vinegar. Light, punchy, and deeply cleansing.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Medium</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 289 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('ginger')">View Spice Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Adrak Rai Pickle', 289)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7: Stuffed Red Chili -->
+                <div class="product-card" id="prod-stuffed-chili" data-product="stuffed_chili">
+                    <div class="card-image bg-red-50 dark:bg-red-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/stuffed_red_chili_pickle_1772097196408.png"
+                            alt="Stuffed Red Chili" class="w-full h-full object-cover">
+                        <div class="card-badge bg-red-600">FESTIVE</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Ludhiana Courtyard</div>
+                        <h3 class="card-name">Stuffed Red Chili Pickle</h3>
+                        <p class="card-desc">Jumbo red chilies hand-stuffed with a secret golden masala and cured in
+                            pure mustard oil.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Hot</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 369 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('stuffed_chili')">View Spice
+                                    Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Stuffed Red Chili Pickle', 369)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8: Mix Veg -->
+                <div class="product-card" id="prod-mixed-winter" data-product="mixed_winter">
+                    <div class="card-image bg-orange-50 dark:bg-orange-900/20">
+                        <img src="/Users/shrishkumar/.gemini/antigravity/brain/350d1c75-2048-484f-b5b4-5964a5a4b3a2/mix_veg_pickle_retry_1772097239370.png"
+                            alt="Mixed Winter Vegetable" class="w-full h-full object-cover">
+                        <div class="card-badge bg-green-600">CLASSIC</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-origin">Punjab Local Farms</div>
+                        <h3 class="card-name">Mixed Winter Vegetable</h3>
+                        <p class="card-desc">The classic winter blend of cauliflower, carrots, and turnips in a spicy,
+                            earthy mustard base.</p>
+                        <div class="card-spice-level">
+                            <span class="spice-label">Heat Level:</span>
+                            <div class="spice-dots">
+                                <span class="sd active"></span>
+                                <span class="sd active"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                                <span class="sd"></span>
+                            </div>
+                            <span class="heat-text">Mild</span>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">₹ 359 <span class="price-unit">/ 500g</span></div>
+                            <div class="card-actions">
+                                <button class="btn-secret" onclick="openProduct('mixed_winter')">View Spice
+                                    Secrets</button>
+                                <button class="btn-add-cart" onclick="addToCart('Mixed Winter Vegetable', 359)"
+                                    aria-label="Add to cart">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <line x1="12" y1="5" x2="12" y2="19" />
+                                        <line x1="5" y1="12" x2="19" y2="12" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== STORY ===================== -->
+    <section id="story" class="story py-20 dark:bg-gray-950">
+        <div class="story-bg-motif"></div>
+        <div class="container story-grid">
+            <div class="story-visual">
+                <div class="story-jar-stack">
+                    <div class="story-jar sj-back">
+                        <div class="story-jar-inner"
+                            style="background: linear-gradient(180deg, #c0392b 0%, #7d241a 100%)"></div>
+                    </div>
+                    <div class="story-jar sj-front">
+                        <div class="story-jar-inner"
+                            style="background: linear-gradient(180deg, #e67e22 0%, #9a4b0e 100%)"></div>
+                        <div class="story-jar-shine"></div>
+                    </div>
+                    <div class="story-label-visual">Pind &amp; Pipali<br><small>Ludhiana, Punjab</small></div>
+                </div>
+                <div class="story-quote-block">
+                    <div class="quote-mark">"</div>
+                    <p>A perfect pickle cannot be rushed. It is a conversation between the spice and the sun.</p>
+                    <cite>— The Matriarch, Ludhiana, 1962</cite>
+                </div>
+            </div>
+            <div class="story-text">
+                <span class="section-eyebrow">Our Story</span>
+                <h2 class="section-title story-h2">From a Ludhiana Courtyard<br><em>to Your Table.</em></h2>
+                <p class="story-p">In the heart of Punjab, there is a rhythm to the seasons. In Ludhiana, when the
+                    summer sun hits its peak, the ritual begins. It starts with the selection of the finest
+                    <strong>Ramkela mangoes</strong> and the hand-pounding of sun-dried spices.
+                </p>
+                <p class="story-p">Pind &amp; Pipali wasn't born in a factory; it was born in a <strong>sun-drenched
+                        courtyard</strong>, under the watchful eyes of a matriarch who knew that a perfect pickle cannot
+                    be rushed.</p>
+                <p class="story-p">While the world moved toward mass production and chemical preservatives, we chose to
+                    stay behind. We stayed in the <em>"Pind"</em> while using <em>"Pipali"</em> to bridge the gap
+                    between tradition and the modern gourmet palate.</p>
+                <div class="story-promise">
+                    <div class="promise-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <p>When you open a jar of Pind &amp; Pipali, you aren't just tasting a condiment. You are tasting
+                        the <strong>soil of Punjab</strong>, the warmth of a Ludhiana summer, and the <em>Maa de Hath da
+                            Swad</em> that remains unchanged by time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="process" id="process">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">The Craft</span>
+                <h2 class="section-title">The Sun-Drying Process</h2>
+                <p class="section-sub">Every jar takes weeks, not hours. Here is why that matters.</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Harvest &amp; Selection</h3>
+                    <p class="step-desc">Only the finest seasonal produce makes the cut. Each Ramkela mango is
+                        hand-inspected for ripeness, firmness, and fragrance before it enters a Pind &amp; Pipali jar.
+                    </p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Stone-Ground Masala</h3>
+                    <p class="step-desc">Our spice master grinds each batch fresh on a traditional silbatta. No machine
+                        grinding — the stone releases aromatic oils that bottling can't replicate.</p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M8 2v4M16 2v4M3 10h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">Barni Curing</h3>
+                    <p class="step-desc">Packed into hand-glazed ceramic barnis (matka pots), each batch is sealed with
+                        a muslin cloth tied with jute string — sealed in tradition.</p>
+                </div>
+                <div class="process-connector">
+                    <div class="connector-line"></div>
+                    <div class="connector-dot"></div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M12 22V12" />
+                            <path d="M7 9.5v5.5l5 2.5 5-2.5V9.5" />
+                        </svg>
+                    </div>
+                    <h3 class="step-title">21 Days of Punjabi Sun</h3>
+                    <p class="step-desc">The barnis sit in our open courtyard, turned by hand each morning to ensure
+                        even sun exposure. No industrial heaters. Only time, sunlight, and patience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PILLARS ===================== -->
+    <section class="pillars" id="pillars">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Why Pind &amp; Pipali</span>
+                <h2 class="section-title">Three Pillars of<br><em>Authenticity</em></h2>
+            </div>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-icon sun-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="5" />
+                            <path
+                                d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">The Sun-Soaked Method</h3>
+                    <p class="pillar-desc">We don't use industrial heaters. Our pickles "cook" slowly in traditional
+                        ceramic barnis under the natural Punjabi sun. This is the only way to lock in that deep,
+                        nostalgic flavour.</p>
+                    <div class="pillar-accent"></div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon farm-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">Ludhiana's Finest Produce</h3>
+                    <p class="pillar-desc">We source every ingredient from local farmers we know by name. If the spice
+                        isn't vibrant and the oil isn't pure, it doesn't enter our jars. Simple as that.</p>
+                    <div class="pillar-accent"></div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon pure-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                    </div>
+                    <h3 class="pillar-title">No Shortcuts</h3>
+                    <p class="pillar-desc">No artificial colors. No synthetic vinegars. No preservatives. Just salt,
+                        oil, spice, and time — the same four ingredients our grandmother trusted.</p>
+                    <div class="pillar-accent"></div>
+                </div>
+            </div>
+            <div class="certifications">
+                <div class="cert-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>FSSAI Certified</span>
+                </div>
+                <div class="cert-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>100% Natural</span>
+                </div>
+                <div class="cert-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>No Preservatives</span>
+                </div>
+                <div class="cert-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Farm Sourced</span>
+                </div>
+                <div class="cert-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>
+                    <span>Handcrafted</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">From Our Customers</span>
+                <h2 class="section-title">Voices of the<br><em>Community</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"For 20 years I searched for a mango pickle that reminded me of my
+                        Nani's hands. Pind &amp; Pipali's jar brought tears to my eyes on first taste. This is the real
+                        thing."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AP</div>
+                        <div>
+                            <div class="author-name">Amritpal Singh</div>
+                            <div class="author-loc">NRI, Toronto · formerly Amritsar</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card tc-featured">
+                    <div class="tc-quote-mark">"</div>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The Lahsun Mirch is dangerous. I put it on everything. My parathas, my
+                        dal, my sabzi. I may have a problem. Worth every rupee."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div>
+                            <div class="author-name">Dr. Raveena Sharma</div>
+                            <div class="author-loc">Food Blogger · Ludhiana</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"The packaging alone tells you this brand means business. But the lime
+                        pickle sealed it — bright, sharp, and perfectly balanced. Finally an artisan brand from Punjab."
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">GK</div>
+                        <div>
+                            <div class="author-name">Gurpreet Kaur</div>
+                            <div class="author-loc">Chef · Delhi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== NEWSLETTER ===================== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-inner">
+                <div class="newsletter-text">
+                    <span class="section-eyebrow" style="color:rgba(255,255,255,0.7)">Stay Connected</span>
+                    <h2 class="newsletter-title">The Pind &amp; Pipali<br><em>Seasonal Dispatch</em></h2>
+                    <p>New varieties when the harvest comes in. Stories from the courtyard. Recipes for the discerning
+                        palate. No spam — ever.</p>
+                </div>
+                <form class="newsletter-form" onsubmit="handleSubscribe(event)">
+                    <div class="form-group">
+                        <input type="email" id="email-input" placeholder="Your email address" class="email-input"
+                            required />
+                        <button type="submit" class="btn-subscribe">
+                            Subscribe
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p class="form-note">Join 4,200+ lovers of authentic flavour. Unsubscribe anytime.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer py-20 dark:bg-gray-900">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-hindi">ਪਿੰਡ</span>
+                        <span class="logo-ampersand">&amp;</span>
+                        <span class="logo-english">Pipali</span>
+                    </div>
+                    <p class="footer-brand-desc">The Heritage of Ludhiana, Bottled.<br>Handcrafted in the tradition of
+                        the Punjab, since 1962.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z" />
+                                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="openProduct('mango')">Mango Pickle</a></li>
+                        <li><a href="#" onclick="openProduct('lime')">Lime Pickle</a></li>
+                        <li><a href="#" onclick="openProduct('chili')">Chili Pickle</a></li>
+                        <li><a href="#" onclick="openProduct('garlic')">Garlic Pickle</a></li>
+                        <li><a href="#" onclick="openProduct('mixed')">Mixed Achar</a></li>
+                        <li><a href="#" onclick="openProduct('ginger')">Ginger Pickle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#process">The Process</a></li>
+                        <li><a href="#pillars">Our Promise</a></li>
+                        <li><a href="#">Wholesale</a></li>
+                        <li><a href="#">Gift Hampers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:hello@pindpipali.in">hello@pindpipali.in</a></li>
+                        <li><a href="tel:+911234567890">+91 123 456 7890</a></li>
+                        <li><span>Ludhiana, Punjab 141001</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Pind &amp; Pipali. All rights reserved. Made with love in Ludhiana, Punjab.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== PRODUCT MODAL ===================== -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+        <div class="modal" id="product-modal" onclick="event.stopPropagation()">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="modal-grid">
+                <div class="modal-image" id="modal-image">
+                    <div class="modal-jar-wrap" id="modal-jar">
+                        <!-- Dynamic jar -->
+                    </div>
+                </div>
+                <div class="modal-content">
+                    <span class="section-eyebrow" id="modal-origin"></span>
+                    <h2 class="modal-title" id="modal-name"></h2>
+                    <p class="modal-desc" id="modal-desc"></p>
+
+                    <div class="modal-section">
+                        <h3 class="modal-section-title">🌶 The Spice Secrets</h3>
+                        <ul class="ingredients-list" id="modal-ingredients"></ul>
+                    </div>
+
+                    <div class="modal-section">
+                        <h3 class="modal-section-title">☀ The Sun-Drying Process</h3>
+                        <div class="process-mini" id="modal-process"></div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div class="modal-price" id="modal-price"></div>
+                        <button class="btn-primary modal-add-btn" id="modal-add-btn">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== CART DRAWER ===================== -->
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="modal-close" onclick="toggleCart()" aria-label="Close cart">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <div class="cart-empty" id="cart-empty">
+                <div class="empty-jar">🫙</div>
+                <p>Your cart is empty.</p>
+                <button class="btn-primary"
+                    onclick="toggleCart();document.getElementById('collection').scrollIntoView({behavior:'smooth'})">Explore
+                    Collection</button>
+            </div>
+        </div>
+        <div class="cart-footer" id="cart-footer" style="display:none">
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cart-total-amount">₹ 0</span>
+            </div>
+            <button class="btn-primary btn-full checkout-btn">Proceed to Checkout</button>
+            <p class="cart-note">Free delivery on orders above ₹ 999</p>
+        </div>
+    </div>
+
+    <!-- ===================== TOAST ===================== -->
+    <div class="toast" id="toast">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12" />
+        </svg>
+        <span id="toast-msg">Added to cart!</span>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
